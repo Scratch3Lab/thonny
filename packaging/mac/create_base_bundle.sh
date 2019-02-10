@@ -6,6 +6,7 @@ set -e
 # Before running this
 # * Install Python (official dmg)
 # * Build and install Tcl/Tk (from source (install_tcltk.sh), because ActiveTcl licence is not compatible)
+# wwj: 3.7.2采用python内置的Tcl/Tk没有问题
 
 # This version takes official Python installation as base
 
