@@ -9,4 +9,5 @@ PYTHON_BIN="$(cd "$UGLY_PYTHON_BIN" && pwd -P)"
 export SSL_CERT_DIR="$(cd "$UGLY_SSL_CERT_DIR" && pwd -P)"
 export SSL_CERT_FILE="$SSL_CERT_DIR/cacert.pem"
 
-exec "$PYTHON_BIN/python3.7" -m thonny "$@"
+# exec "$PYTHON_BIN/python3.7" -m thonny "$@"
+exec "$PYTHON_BIN/python3.7" -m jupyterlab "$@"
