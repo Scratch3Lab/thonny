@@ -92,8 +92,8 @@ sed -i.bak "s/VERSION/$VERSION/" build/Thonny.app/Contents/Info.plist
 rm -f build/Thonny.app/Contents/Info.plist.bak
 
 # sign frameworks and app ##############################
-codesign -s "Aivar Annamaa" --keychain ~/Library/Keychains/login.keychain build/Thonny.app/Contents/Frameworks/Python.framework
-codesign -s "Aivar Annamaa" --keychain ~/Library/Keychains/login.keychain build/Thonny.app
+# codesign -s "Aivar Annamaa" --keychain ~/Library/Keychains/login.keychain build/Thonny.app/Contents/Frameworks/Python.framework
+# codesign -s "Aivar Annamaa" --keychain ~/Library/Keychains/login.keychain build/Thonny.app
 
 # add readme #####################################################################
 cp readme.txt build
@@ -106,7 +106,7 @@ hdiutil create -srcfolder build -volname "Thonny $VERSION" $FILENAME
 hdiutil internet-enable -yes $FILENAME
 
 # sign dmg ######################
-codesign -s "Aivar Annamaa" --keychain ~/Library/Keychains/login.keychain $FILENAME
+# codesign -s "Aivar Annamaa" --keychain ~/Library/Keychains/login.keychain $FILENAME
 
 # clean up
 rm -rf build
